@@ -1,0 +1,20 @@
+Hang Man
+Bronze:
+User, I want to show blank spaces
+user, I want to generate random lengthes of hidden spaces
+user, I want to have a nice background setting
+user, I want there to be a hint that displays
+
+Silver:
+
+user, I want there to be a consquence for guessing incorrectly
+user, I want there to be a time limit
+
+
+
+
+Gold:
+user, I want to be rewarded for completing the game
+user, I want a visuall display of something If I guess incorrectly.
+user, I want a visuall display of something If I guess incorrectly.
+user, I want there to be sounds when I guess incorrectly
