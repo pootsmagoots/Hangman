@@ -41,14 +41,14 @@ background-size: cover;
  width: 180px;
  height: 315px;
 }
-/*
+
 header {
- border: 1px solid magenta;
+ border: 1px solid black;
  width: 750px;
  height: 500px;
  margin: 10px 50px;
  display: block;
-}*/
+}
 
 #lettersWrong {
  position: absolute;

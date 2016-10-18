@@ -80,7 +80,9 @@ document.onkeypress = function(e) {
  }
  }
 }
-
+$("#mybox").on("Click", function(){
+  prompt("please type in your hint")
+})
 })
 //
 // // for(i = 0; i < res.length; i++){
