@@ -22,7 +22,10 @@ border-style:*/
 body {
  font-family: 'Roboto Condensed', sans-serif;
  font-size: 32px;
- background-color: lightblue;
+ /*background-color: lightblue;*/
+background-image: url("https://dncache-mauganscorp.netdna-ssl.com/thumbseg/300/300920-bigthumbnail.jpg");
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 #hang {
@@ -38,20 +41,21 @@ body {
  width: 180px;
  height: 315px;
 }
-
+/*
 header {
- border: 1px solid red;
+ border: 1px solid magenta;
  width: 750px;
  height: 500px;
  margin: 10px 50px;
  display: block;
-}
+}*/
 
 #lettersWrong {
  position: absolute;
  bottom: 550px;
  right: 20px;
  font-size:25px;
+ color: magenta;
 }
 
 header div {

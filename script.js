@@ -53,44 +53,31 @@ document.onkeypress = function(e) {
  loseCounter++;
  alert("Sorry! You got a letter wrong.")
  $('#lettersWrong').append(e.key + " ")
- var c=document.getElementById("myCanvas");
+ var c=document.getElementById("cat");
  var ctx=c.getContext("2d");
  if (loseCounter === 1){
- ctx.beginPath();
- ctx.arc(150,15,15,0,2*Math.PI);
- ctx.stroke();
+   confirm("It's okay keep trying")
+
+
  }
  if (loseCounter === 2){
- ctx.beginPath();
- ctx.moveTo(150, 30);
- ctx.lineTo(150, 85);
- ctx.lineWidth = 5;
- ctx.stroke();
+   confirm("You still have four more attempts")
+
  }
  if (loseCounter === 3){
- ctx.beginPath();
- ctx.moveTo(150, 50);
- ctx.lineTo(100, 20);
- ctx.lineWidth = 3;
- ctx.stroke();
+   confrim("you're attempts are running out! 3 more left")
+
  }
  if (loseCounter === 4){
- ctx.beginPath();
- ctx.moveTo(150, 50);
- ctx.lineTo(200, 20);
- ctx.stroke();
+   confirm("2 more attempts left")
+
  }
  if (loseCounter === 5){
- ctx.beginPath();
- ctx.moveTo(150, 84)
- ctx.lineTo(100, 115)
- ctx.stroke();
+   confirm("this is your last attempt or it's game over!!")
+
  }
  if (loseCounter === 6){
-   ctx.beginPath();
-   ctx.moveTo(150, 84)
-   ctx.lineTo(200, 115)
-   ctx.stroke()
+
    alert("you lose. now you're dead.")
  }
  }
