@@ -57,8 +57,6 @@ document.onkeypress = function(e) {
  var ctx=c.getContext("2d");
  if (loseCounter === 1){
    confirm("It's okay keep trying")
-
-
  }
  if (loseCounter === 2){
    confirm("You still have four more attempts")
@@ -77,11 +75,12 @@ document.onkeypress = function(e) {
 
  }
  if (loseCounter === 6){
-
+  $("html").hide();
    alert("you lose. now you're dead.")
  }
  }
 }
+
 })
 //
 // // for(i = 0; i < res.length; i++){

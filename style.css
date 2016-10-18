@@ -86,3 +86,10 @@ button {
   height: 70px;
   font-size: 30px;
 }
+#hint {
+  width: 80px;
+  height: 70px;
+}
+p {
+  color: lightblue;
+}
