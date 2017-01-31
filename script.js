@@ -1,6 +1,10 @@
+$("#mybox").hide()
+$("#hang").hide()
+$("#hang1").hide()
+$("#hang2").hide()
+$("#end").hide()
 $(document).ready(function() {
-    $("input").hide()
-    $("#hang").hide()
+
     confirm("Welcome to Hangman!");
 
     var res = prompt("Player one, please type in a word.");
@@ -32,25 +36,31 @@ $(document).ready(function() {
             var c = document.getElementById("hangarea");
             var ctx = c.getContext("2d");
             if (loseCounter === 1) {
+               $("#hang2").show()
                 confirm("It's okay keep trying")
 
             }
             if (loseCounter === 2) {
                 confirm("You still have four more attempts")
-                $("#hang").show()
+                $("#hang2").hide()
+                $("#hang1").show()
                 alert("Oh look a nuse!")
 
             }
             if (loseCounter === 3) {
                 confirm("your attempts are running out! 3 more left")
                 var word = prompt("Player one please type in a hint")
-                $("input").show()
-                $("input").val(word)
+                $("#mybox").show()
+                $("#mybox").val(word)
 
 
             }
             if (loseCounter === 4) {
                 confirm("2 more attempts left")
+                $("#hang1").hide()
+                $("#hang").show()
+                alert("now it's getting serious!")
+
 
             }
             if (loseCounter === 5) {
@@ -58,8 +68,13 @@ $(document).ready(function() {
 
             }
             if (loseCounter === 6) {
-                $("html").hide();
+                $("#hang").hide()
+                $("#end").show()
                 alert("you lose. now you're dead.")
+                var end = $("html")
+                end.on("keypress", function(){
+                  $("html").hide()
+                })
             }
         }
     }
