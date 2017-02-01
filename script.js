@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 
     var res = prompt("Player one, please type in a word.");
-
+    
     for (var i = 0; i < res.length; i++) {
         $("main").append("<button></button>");
     }
