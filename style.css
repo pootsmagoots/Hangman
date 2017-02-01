@@ -2,6 +2,9 @@ body {
     background-image: url("http://www.publicdomainpictures.net/pictures/160000/velka/hintergrund-tapete-1456415170XfY.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 500px;
+    /*padding-top: 80px;
+    padding-bottom: 80px;*/
 }
 #mybox{
   display: flex;
@@ -10,6 +13,17 @@ body {
   color: red;
 }
 
+.controls{
+display: flex;
+flex-direction: column;;
+justify-content: space-around;
+padding-left: 1200px;
+}
+
+button{
+  width: 100px;
+  height: 70px;
+}
 #hang {
     padding-left: 125px;
     width: 400px;
@@ -72,7 +86,7 @@ section {
 button {
     width: 50px;
     height: 70px;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 p {

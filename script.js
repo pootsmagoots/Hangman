@@ -3,9 +3,11 @@ $("#hang").hide()
 $("#hang1").hide()
 $("#hang2").hide()
 $("#end").hide()
+$("#win").hide()
 $(document).ready(function() {
 
     confirm("Welcome to Hangman!");
+
 
     var res = prompt("Player one, please type in a word.");
 
@@ -25,6 +27,10 @@ $(document).ready(function() {
                     $("button").eq(i).html(res[i]);
                     winCounter++;
                     if (winCounter === res.length) {
+                      $("#hang2").hide()
+                      $("#hang1").hide()
+                      $("hang").hide()
+                      $("#win").show()
                         alert("Congratulations!!! You got the word right.");
                     }
                 }
@@ -36,7 +42,7 @@ $(document).ready(function() {
             var c = document.getElementById("hangarea");
             var ctx = c.getContext("2d");
             if (loseCounter === 1) {
-               $("#hang2").show()
+                $("#hang2").show()
                 confirm("It's okay keep trying")
 
             }
@@ -72,10 +78,47 @@ $(document).ready(function() {
                 $("#end").show()
                 alert("you lose. now you're dead.")
                 var end = $("html")
-                end.on("keypress", function(){
-                  $("html").hide()
+                end.on("keypress", function() {
+                    $("html").hide()
                 })
             }
         }
-    }
+      }
+//       var reset = $("#reset")
+// var start = $("#start")
+// var pause= $("#pause")
+//
+// var seconds = 0
+// var timerId
+//
+//
+//
+//
+// function updateTime(){
+//   seconds++
+//   $("#timer").html(seconds)
+// }
+//
+// reset.on("click", function(){
+//   clearInterval(timerId)
+//   seconds = 0
+//   $("timer").html("stop watch")
+//
+//
+// })
+//
+//
+// start.on("click", function(){
+//     $("#timer").html(seconds)
+//   timerId = setInterval(updateTime, 1000)
+// })
+//
+// pause.on("click", function(){
+//     clearInterval(timerId)
+// })
+//
+// function updateTime(){
+//   seconds++
+// }
+
 })
