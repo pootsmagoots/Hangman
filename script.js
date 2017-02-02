@@ -1,3 +1,6 @@
+
+// for these you could come up with a separate class called "hide" or something similar with "display: none"
+// that's already attached to these elements in the html, then you could remove that class when needed
 $("#mybox").hide()
 $("#hang").hide()
 $("#hang1").hide()
@@ -10,7 +13,7 @@ $(document).ready(function() {
 
 
     var res = prompt("Player one, please type in a word.");
-    
+
     for (var i = 0; i < res.length; i++) {
         $("main").append("<button></button>");
     }
@@ -19,23 +22,32 @@ $(document).ready(function() {
     var winCounter = 0;
     var loseCounter = 0;
 
+// key press is nice functionality, you could create a named function that this runs instead of incapsulitating everything in one function
     document.onkeypress = function(e) {
+        // run another function based on a match or no match
         if (res.includes(e.key)) {
             alert("Nice! you got a letter.");
             for (var i = 0; i < res.length; i++) {
                 if (res[i] === e.key) {
                     $("button").eq(i).html(res[i]);
                     winCounter++;
+                    // break this if statement into a separate function that runs every time there is a match instead of nesting it
                     if (winCounter === res.length) {
                       $("#hang2").hide()
                       $("#hang1").hide()
                       $("hang").hide()
                       $("#win").show()
+                      // could try using modals instead of alert boxes
                         alert("Congratulations!!! You got the word right.");
                     }
                 }
             }
         } else {
+          // Here you could try using an array of arrays to access this function
+          // for example var loseOptions = [[$("#hang2").show(),confirm("It's okay keep trying")],[confirm("You still have four more attempts"),$("#hang2").hide(),
+          // $("#hang1").show(), alert("Oh look a nuse!")]]
+          // then you could access each value after a turn by loseOptions[loseCounter][1] or loseOptions[loseCounter][2]
+
             loseCounter++;
             alert("Sorry! You got a letter wrong.")
             $('#lettersWrong').append(e.key + " ")
