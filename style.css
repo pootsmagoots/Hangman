@@ -50,7 +50,7 @@ button{
 
 header {
   /*i'd give this a white background so that it doesnt get swallowed by the background image*/
-  background-color: white;
+  /*background-color: white;*/
   border: 1px solid black;
   width: 750px;
   height: 500px;

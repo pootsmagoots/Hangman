@@ -2,13 +2,14 @@ $("#mybox").hide()
 $("#hang").hide()
 $("#hang1").hide()
 $("#hang2").hide()
-// you could also give the hanging-man elements a hangman class and then do $('.hangman').hide()
+/// you could also give the hanging-man elements a hangman class and then do $('.hangman').hide()
 $("#end").hide()
 $("#win").hide()
+
 $(document).ready(function() {
 
   confirm("Welcome to Hangman!");
-  //just alert here would suffice. confirm gives you "ok" & "cancel" buttons
+  ///just alert here would suffice. confirm gives you "ok" & "cancel" buttons
 
   var res = prompt("Player one, please type in a word.");
 
@@ -22,7 +23,7 @@ $(document).ready(function() {
 
   ///I love that you can just use keypresses to guess letters. just a note, this is the vanilla way.
   document.onkeypress = function(e) {
-    // add res=res.toLowerCase() in case someone adds a captial letter
+    /// add res=res.toLowerCase() in case someone adds a captial letter
     if (res.includes(e.key)) {
 
       alert("Nice! you got a letter.");
@@ -31,7 +32,7 @@ $(document).ready(function() {
           $("button").eq(i).html(res[i]);
           winCounter++;
           if (winCounter === res.length) {
-            //might make this into a win function
+            ///might make this into a win function
             $("#hang2").hide()
             $("#hang1").hide()
             $("hang").hide()
@@ -45,11 +46,11 @@ $(document).ready(function() {
       console.log(loseCounter);
       alert("Sorry! You got a letter wrong.")
       $('#lettersWrong').append(e.key + " ")
-      //remove the 2 lines below since you aren't using the canvas
+      ///remove the 2 lines below since you aren't using the canvas
       var c = document.getElementById("hangarea");
       var ctx = c.getContext("2d");
 
-      //refactor the below into a switch statement
+      ///refactor the below into a switch statement
       if (loseCounter === 1) {
         $("#hang2").show()
         confirm("It's okay keep trying")
@@ -59,15 +60,14 @@ $(document).ready(function() {
         confirm("You still have four more attempts")
         $("#hang2").hide()
         $("#hang1").show()
-        //lies! i just died! i thought i had 4 tries!
-        //spelling is noose, also
+        ///spelling is noose, also
         alert("Oh look a nuse!")
-
       }
       if (loseCounter === 3) {
-        // could have attemptsLeft variable, e.g.:
+        /// could have attemptsLeft variable, e.g.:
         // attemptsLeft = 6-loseCounter
         confirm("your attempts are running out! 3 more left")
+        /// cool feature
         var word = prompt("Player one please type in a hint")
         $("#mybox").show()
         $("#mybox").val(word)
