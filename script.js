@@ -59,15 +59,13 @@ $(document).ready(function() {
         $("#hang2").show()
         confirm("It's okay keep trying")
 
-      }
-      if (loseCounter === 2) {
+      } else if (loseCounter === 2) {
         confirm("You still have four more attempts")
         $("#hang2").hide()
         $("#hang1").show()
         ///spelling is noose, also
         alert("Oh look a nuse!")
-      }
-      if (loseCounter === 3) {
+      } else if (loseCounter === 3) {
         /// could have attemptsLeft variable, e.g.:
         // attemptsLeft = 6-loseCounter
         confirm("your attempts are running out! 3 more left")
@@ -98,6 +96,21 @@ $(document).ready(function() {
         end.on("keypress", function() {
           $("html").hide()
         })
+
+        // switch (loseCounter){
+        //   case 1:
+        //     $("#hang2").show()
+        //     confirm("It's okay keep trying")
+        //     break;
+        //   case 2:
+        //     confirm("You still have four more attempts")
+        //     $("#hang2").hide()
+        //     $("#hang1").show()
+        //     ///spelling is noose, also
+        //     alert("Oh look a nuse!")
+        //     break;
+        // }
+
       }
     }
   }
