@@ -21,6 +21,10 @@ $(document).ready(function() {
   var winCounter = 0;
   var loseCounter = 0;
 
+  // $(document).on("keypress", function(e){
+  //   //...
+  // })
+
   ///I love that you can just use keypresses to guess letters. just a note, this is the vanilla way.
   document.onkeypress = function(e) {
     /// add res=res.toLowerCase() in case someone adds a captial letter
