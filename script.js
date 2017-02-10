@@ -97,6 +97,8 @@ $(document).ready(function() {
           $("html").hide()
         })
 
+
+///Switch statement for reference
         // switch (loseCounter){
         //   case 1:
         //     $("#hang2").show()
